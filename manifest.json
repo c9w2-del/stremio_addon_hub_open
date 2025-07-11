@@ -1,0 +1,73 @@
+{
+  "id": "community.stremio.youraddonhub",
+  "version": "1.0.0",
+  "name": "Your Awesome Entertainment Hub",
+  "description": "Your ultimate source for movies, TV shows, and anime, powered by TMDb and curated lists. Uses Torrentio + Real-Debrid for streams!",
+  "resources": [
+    "catalog",
+    "meta",
+    "stream"
+  ],
+  "types": ["movie", "series"],
+  "catalogs": [
+    {
+      "id": "latest_tv_shows",
+      "name": "Latest TV Shows (EN)",
+      "type": "series",
+      "extra": [
+        {"name": "genre", "options": ["Action & Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Kids", "Mystery", "News", "Reality", "Sci-Fi & Fantasy", "Soap", "Talk", "War & Politics", "Western"], "isRequired": false},
+        {"name": "skip", "isRequired": false}
+      ]
+    },
+    {
+      "id": "latest_movie_releases",
+      "name": "Latest Movie Releases (EN)",
+      "type": "movie",
+      "extra": [
+        {"name": "genre", "options": ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Science Fiction", "TV Movie", "Thriller", "War", "Western"], "isRequired": false},
+        {"name": "year", "options": ["2025", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016"], "isRequired": false},
+        {"name": "skip", "isRequired": false}
+      ]
+    },
+    {
+      "id": "latest_dubbed_anime",
+      "name": "Latest Dubbed Anime (EN)",
+      "type": "series",
+      "extra": [
+        {"name": "genre", "options": ["Action", "Adventure", "Comedy", "Drama", "Fantasy", "Mecha", "Music", "Mystery", "Romance", "Sci-Fi", "Slice of Life", "Sports", "Supernatural", "Thriller"], "isRequired": false},
+        {"name": "skip", "isRequired": false}
+      ]
+    },
+    {
+      "id": "top_trending_movies",
+      "name": "Top 20 Movies Trending",
+      "type": "movie",
+      "extra": [
+        {"name": "genre", "options": ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Science Fiction", "TV Movie", "Thriller", "War", "Western"], "isRequired": false},
+        {"name": "skip", "isRequired": false}
+      ]
+    },
+    {
+      "id": "top_trending_tv_shows",
+      "name": "Top 20 TV Shows Trending",
+      "type": "series",
+      "extra": [
+        {"name": "genre", "options": ["Action & Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Kids", "Mystery", "News", "Reality", "Sci-Fi & Fantasy", "Soap", "Talk", "War & Politics", "Western"], "isRequired": false},
+        {"name": "skip", "isRequired": false}
+      ]
+    },
+    {
+      "id": "recommended_content",
+      "name": "Recommended For You (Movies)",
+      "type": "movie",
+      "extra": [
+         {"name": "genre", "options": ["Action", "Adventure", "Animation", "Comedy", "Crime", "Documentary", "Drama", "Family", "Fantasy", "History", "Horror", "Music", "Mystery", "Romance", "Science Fiction", "TV Movie", "Thriller", "War", "Western"], "isRequired": false}
+      ]
+    }
+  ],
+  "idPrefixes": ["tt", "tmdb"],
+  "behaviorHints": {
+    "configurable": true,
+    "configurationRequired": true
+  }
+}

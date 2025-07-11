@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Awesome Entertainment Hub Addon Configuration</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #1a1a1a; color: #f0f0f0; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #333; border-radius: 8px; background-color: #2a2a2a; }
+        h1 { color: #4CAF50; }
+        p { line-height: 1.6; }
+        a { color: #66ccff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Awesome Entertainment Hub Addon Configuration</h1>
+        <p>This addon is designed for **self-hosting** and relies on environment variables for API keys. It does not require in-addon configuration through this page for its core functionality (TMDb, Trakt).</p>
+        <p>For streaming, please ensure you have the **<a href="https://torrentio.strem.fun/" target="_blank">Torrentio addon</a>** installed in Stremio and that it is configured with your **Real-Debrid** account.</p>
+        
+        <h2>How to Install and Configure (Self-Hosted)</h2>
+        <p>1.  **Clone this project** from your Git repository to your Debian 12 server.</p>
+        <p>2.  **Create a <code>.env</code> file** in the root of the project (next to <code>app.py</code>) and add your API keys:</p>
+        <pre><code>TMDB_API_KEY=your_tmdb_api_key_here
+TRAKT_CLIENT_ID=your_trakt_client_id_here
+TRAKT_CLIENT_SECRET=your_trakt_client_secret_here</code></pre>
+        <p>3.  **Install Python dependencies** from <code>requirements.txt</code> within a virtual environment.</p>
+        <p>4.  **Set up Gunicorn and Nginx** as a reverse proxy to serve the Flask application.</p>
+        <p>5.  **Access your addon** in Stremio by its URL (e.g., <code>http://your-server-ip/manifest.json</code>).</p>
+        
+        <p>Refer to the <code>README.md</code> file in the project's Git repository for detailed setup instructions.</p>
+        
+        <p>If you have any issues, please check your server logs and the <code>README.md</code>.</p>
+    </div>
+</body>
+</html>
